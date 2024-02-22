@@ -1,15 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- build css -->
-    <link rel="stylesheet" href="./dist/output.css">
-    <title>starter</title>
+
+    <!-- FAV ICON -->
+    <link rel="icon"
+        href="https://th.bing.com/th/id/R.bb7128210be698c7a895c1512dba16b7?rik=MYlbSDob9MCAaA&riu=http%3a%2f%2fwww.hornsoftware.com%2fiPimp%2fflags.png&ehk=cCbkrKUSSUq%2b2LwJLzTuVqDsfnLW8f0gH%2fAuZkjeqV0%3d&risl=&pid=ImgRaw&r=0">
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- OUTPUT CSS -->
+    <link rel="stylesheet" href="../dist/output.css">
+
+    <!-- BOOTSTRAP ICON -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
+<title>Flags</title>
+</head>
+
 <body>
-    
+
+    <!------------- Header start ------------->
+    <header>
+        <div class="container mx-auto px-4">
+            <div class="header__wrapper flex justify-between py-[29px]">
+
+                <h1 class="font-extrabold text-2xl leading-8 text-[#111517]">Where in the world?</h1>
+
+                <div class="flex gap-[8px] items-center">
+                    <button class="dark-btn text-[16px] border-[1px] rounded-[50%] py-1 px-2 hover:bg-black hover:text-white border-black">
+                        <i class="bi bi-moon"></i>
+                    </button>
+                    
+                    <p class="text-[#111517] font-semibold leading-[22px]">Dark Mode</p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!------------- Header end ------------->
+
+
+    <!------------- Main start ------------->
+    <main>
+
+        <!------------- Intro section start ------------->
+        <section>
+            <div class="container mx-auto px-4">
+                <div class="intro__wrapper">
+
+                    <div class="py-[48px]">
+                        <form action="#" class="flex justify-between items-center">
+
+                            <div class="input flex gap-[24px] items-center py-[19px] pl-[32px] rounded-[5px]">
+                                <button><i class="bi bi-search"></i></button>
+                                <input type="search" placeholder="Search for a country…" class="outline-none w-[400px]">
+                            </div>
+
+                            <select id="select" class="py-[18px] pl-[24px] pr-[48px] rounded-[5px] text-[#111517]">
+                                <option value="region" selected>Filter by Region</option>
+                                <option value="region">Africa</option>
+                                <option value="region">America</option>
+                                <option value="region">Asia</option>
+                                <option value="region">Europe</option>
+                                <option value="region">Oceania</option>
+                            </select>
+                        </form>
+
+                    </div>
+
+                    <div class="flags__wrapper flex justify-between flex-wrap gap-y-[72px] mb-24">
+
+                        <!-- <div>
+                                <img src="./assets/images/flag-germany.jpeg" alt="flag-germany">
+                                <div class="pt-[24px] pl-[24px] pb-[46px]">
+                                    <h3 class="mb-[16px] text-[18px] font-extrabold text-[#111517]">Germany</h3>
+                                    <p class="mb-[2px]">Population: 81,770,900</p>
+                                    <p class="mb-[2px]">Region: Europe</p>
+                                    <p>Capital: Berlin</p>
+                                </div>
+                            </div>
+        
+                            <div>
+                                <img src="./assets/images/flag-germany.jpeg" alt="flag-germany">
+                                <div class="pt-[24px] pl-[24px] pb-[46px]">
+                                    <h3 class="mb-[16px] text-[18px] font-extrabold text-[#111517]">Germany</h3>
+                                    <p class="mb-[2px]">Population: 81,770,900</p>
+                                    <p class="mb-[2px]">Region: Europe</p>
+                                    <p>Capital: Berlin</p>
+                                </div>
+                            </div>
+        
+                            <div>
+                                <img src="./assets/images/flag-germany.jpeg" alt="flag-germany">
+                                <div class="pt-[24px] pl-[24px] pb-[46px]">
+                                    <h3 class="mb-[16px] text-[18px] font-extrabold text-[#111517]">Germany</h3>
+                                    <p class="mb-[2px]">Population: 81,770,900</p>
+                                    <p class="mb-[2px]">Region: Europe</p>
+                                    <p>Capital: Berlin</p>
+                                </div>
+                            </div>
+        
+                            <div>
+                                <img src="./assets/images/flag-germany.jpeg" alt="flag-germany">
+                                <div class="pt-[24px] pl-[24px] pb-[46px]">
+                                    <h3 class="mb-[16px] text-[18px] font-extrabold text-[#111517]">Germany</h3>
+                                    <p class="mb-[2px]">Population: 81,770,900</p>
+                                    <p class="mb-[2px]">Region: Europe</p>
+                                    <p>Capital: Berlin</p>
+                                </div>
+                            </div>
+        
+                            <div>
+                                <img src="./assets/images/flag-germany.jpeg" alt="flag-germany">
+                                <div class="pt-[24px] pl-[24px] pb-[46px]">
+                                    <h3 class="mb-[16px] text-[18px] font-extrabold text-[#111517]">Germany</h3>
+                                    <p class="mb-[2px]">Population: 81,770,900</p>
+                                    <p class="mb-[2px]">Region: Europe</p>
+                                    <p>Capital: Berlin</p>
+                                </div>
+                            </div>
+        
+                            <div>
+                                <img src="./assets/images/flag-germany.jpeg" alt="flag-germany">
+                                <div class="pt-[24px] pl-[24px] pb-[46px]">
+                                    <h3 class="mb-[16px] text-[18px] font-extrabold text-[#111517]">Germany</h3>
+                                    <p class="mb-[2px]">Population: 81,770,900</p>
+                                    <p class="mb-[2px]">Region: Europe</p>
+                                    <p>Capital: Berlin</p>
+                                </div>
+                            </div>
+        
+                            <div>
+                                <img src="./assets/images/flag-germany.jpeg" alt="flag-germany">
+                                <div class="pt-[24px] pl-[24px] pb-[46px]">
+                                    <h3 class="mb-[16px] text-[18px] font-extrabold text-[#111517]">Germany</h3>
+                                    <p class="mb-[2px]">Population: 81,770,900</p>
+                                    <p class="mb-[2px]">Region: Europe</p>
+                                    <p>Capital: Berlin</p>
+                                </div>
+                            </div>
+        
+                            <div>
+                                <img src="./assets/images/flag-germany.jpeg" alt="flag-germany">
+                                <div class="pt-[24px] pl-[24px] pb-[46px]">
+                                    <h3 class="mb-[16px] text-[18px] font-extrabold text-[#111517]">Germany</h3>
+                                    <p class="mb-[2px]">Population: 81,770,900</p>
+                                    <p class="mb-[2px]">Region: Europe</p>
+                                    <p>Capital: Berlin</p>
+                                </div>
+                            </div> -->
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!------------- Intro section end  -------------->
+
+
+    </main>
+    <!------------- Main end -------------->
+
 </body>
+
+<!-- UTILS JS -->
+<script src="./utils/utils.js"></script>
+
+<!-- INDEX JS -->
+<script src="./index.js"></script>
+
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+
 </html>

@@ -9,6 +9,6 @@
   "author": "Mr WEB",
   "license": "ISC",
   "devDependencies": {
-    "tailwindcss": "^3.3.2"
+    "tailwindcss": "^3.4.1"
   }
 }

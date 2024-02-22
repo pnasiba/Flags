@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
 /*
-! tailwindcss v3.3.2 | MIT License | https://tailwindcss.com
+! tailwindcss v3.4.1 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -32,9 +34,11 @@
 4. Use the user's configured `sans` font-family by default.
 5. Use the user's configured `sans` font-feature-settings by default.
 6. Use the user's configured `sans` font-variation-settings by default.
+7. Disable tap highlights on iOS
 */
 
-html {
+html,
+:host {
   line-height: 1.5;
   /* 1 */
   -webkit-text-size-adjust: 100%;
@@ -44,12 +48,14 @@ html {
   -o-tab-size: 4;
      tab-size: 4;
   /* 3 */
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   /* 4 */
   font-feature-settings: normal;
   /* 5 */
   font-variation-settings: normal;
   /* 6 */
+  -webkit-tap-highlight-color: transparent;
+  /* 7 */
 }
 
 /*
@@ -121,8 +127,10 @@ strong {
 }
 
 /*
-1. Use the user's configured `mono` font family by default.
-2. Correct the odd `em` font sizing in all browsers.
+1. Use the user's configured `mono` font-family by default.
+2. Use the user's configured `mono` font-feature-settings by default.
+3. Use the user's configured `mono` font-variation-settings by default.
+4. Correct the odd `em` font sizing in all browsers.
 */
 
 code,
@@ -131,8 +139,12 @@ samp,
 pre {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   /* 1 */
-  font-size: 1em;
+  font-feature-settings: normal;
   /* 2 */
+  font-variation-settings: normal;
+  /* 3 */
+  font-size: 1em;
+  /* 4 */
 }
 
 /*
@@ -190,6 +202,10 @@ optgroup,
 select,
 textarea {
   font-family: inherit;
+  /* 1 */
+  font-feature-settings: inherit;
+  /* 1 */
+  font-variation-settings: inherit;
   /* 1 */
   font-size: 100%;
   /* 1 */
@@ -342,6 +358,14 @@ menu {
 }
 
 /*
+Reset default styling for dialogs.
+*/
+
+dialog {
+  padding: 0;
+}
+
+/*
 Prevent resizing textareas horizontally by default.
 */
 
@@ -422,7 +446,7 @@ video {
   display: none;
 }
 
-*, ::before, ::after {
+*, ::before, ::after{
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
   --tw-translate-x: 0;
@@ -472,7 +496,7 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-::backdrop {
+::backdrop{
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
   --tw-translate-x: 0;
@@ -520,4 +544,311 @@ video {
   --tw-backdrop-opacity:  ;
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
+}
+
+.container{
+  width: 100%;
+}
+
+@media (min-width: 640px){
+  .container{
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px){
+  .container{
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px){
+  .container{
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px){
+  .container{
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px){
+  .container{
+    max-width: 1536px;
+  }
+}
+
+.mx-auto{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mb-\[16px\]{
+  margin-bottom: 16px;
+}
+
+.mb-\[2px\]{
+  margin-bottom: 2px;
+}
+
+.flex{
+  display: flex;
+}
+
+.grid{
+  display: grid;
+}
+
+.list-item{
+  display: list-item;
+}
+
+.h-12{
+  height: 3rem;
+}
+
+.h-\[310px\]{
+  height: 310px;
+}
+
+.w-\[400px\]{
+  width: 400px;
+}
+
+.w-12{
+  width: 3rem;
+}
+
+.min-w-24{
+  min-width: 6rem;
+}
+
+.flex-wrap{
+  flex-wrap: wrap;
+}
+
+.place-content-center{
+  place-content: center;
+}
+
+.items-center{
+  align-items: center;
+}
+
+.justify-center{
+  justify-content: center;
+}
+
+.justify-between{
+  justify-content: space-between;
+}
+
+.gap-\[24px\]{
+  gap: 24px;
+}
+
+.gap-\[8px\]{
+  gap: 8px;
+}
+
+.gap-\[75px\]{
+  gap: 75px;
+}
+
+.gap-y-\[72px\]{
+  row-gap: 72px;
+}
+
+.gap-x-2{
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
+}
+
+.gap-x-3{
+  -moz-column-gap: 0.75rem;
+       column-gap: 0.75rem;
+}
+
+.rounded-\[50\%\]{
+  border-radius: 50%;
+}
+
+.rounded-\[5px\]{
+  border-radius: 5px;
+}
+
+.rounded-full{
+  border-radius: 9999px;
+}
+
+.border-\[1px\]{
+  border-width: 1px;
+}
+
+.border{
+  border-width: 1px;
+}
+
+.border-black{
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
+}
+
+.p-4{
+  padding: 1rem;
+}
+
+.px-1{
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
+.px-4{
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.py-\[18px\]{
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+.py-\[19px\]{
+  padding-top: 19px;
+  padding-bottom: 19px;
+}
+
+.py-\[29px\]{
+  padding-top: 29px;
+  padding-bottom: 29px;
+}
+
+.py-\[48px\]{
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+.px-3{
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.pb-\[46px\]{
+  padding-bottom: 46px;
+}
+
+.pl-\[24px\]{
+  padding-left: 24px;
+}
+
+.pl-\[32px\]{
+  padding-left: 32px;
+}
+
+.pr-\[48px\]{
+  padding-right: 48px;
+}
+
+.pt-\[24px\]{
+  padding-top: 24px;
+}
+
+.text-2xl{
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text-\[16px\]{
+  font-size: 16px;
+}
+
+.text-\[18px\]{
+  font-size: 18px;
+}
+
+.text-xl{
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.font-extrabold{
+  font-weight: 800;
+}
+
+.font-semibold{
+  font-weight: 600;
+}
+
+.leading-8{
+  line-height: 2rem;
+}
+
+.leading-\[22px\]{
+  line-height: 22px;
+}
+
+.text-\[\#111517\]{
+  --tw-text-opacity: 1;
+  color: rgb(17 21 23 / var(--tw-text-opacity));
+}
+
+.text-red-700{
+  --tw-text-opacity: 1;
+  color: rgb(185 28 28 / var(--tw-text-opacity));
+}
+
+.outline-none{
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.duration-500{
+  transition-duration: 500ms;
+}
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+header {
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.06);
+  background: rgb(255, 255, 255);
+}
+
+.input {
+  box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.05);
+  background: rgb(255, 255, 255);
+}
+
+#select {
+  box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.05);
+  background: rgb(255, 255, 255);
+}
+
+.flags__wrapper>div {
+  border-radius: 5px;
+  box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.03);
+  background: rgb(255, 255, 255);
+}
+
+.flags__wrapper>div:hover{
+  scale: 1.02;
+  transition: all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.hover\:bg-black:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-red-700:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(185 28 28 / var(--tw-bg-opacity));
+}
+
+.hover\:text-white:hover{
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
