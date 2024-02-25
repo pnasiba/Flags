@@ -27,16 +27,16 @@
     <!------------- Header start ------------->
     <header>
         <div class="container mx-auto px-4">
-            <div class="header__wrapper flex justify-between py-[29px]">
+            <div class="header__wrapper flex justify-between py-[29px] ">
 
-                <h1 class="font-extrabold text-2xl leading-8 text-[#111517]">Where in the world?</h1>
+                <h1 class="title font-extrabold text-2xl leading-8 text-[#111517]">Where in the world?</h1>
 
                 <div class="flex gap-[8px] items-center">
-                    <button class="dark-btn text-[16px] border-[1px] rounded-[50%] py-1 px-2 hover:bg-black hover:text-white border-black">
+                    <button type="submit" class="dark-btn text-[16px] border-[1px] rounded-[50%] w-[40px] h-[40px] hover:bg-slate-800 hover:text-white border-slate-900 dark:bg-white dark:text-black">
                         <i class="bi bi-moon"></i>
                     </button>
                     
-                    <p class="text-[#111517] font-semibold leading-[22px]">Dark Mode</p>
+                    <p class="text-[#111517] font-semibold leading-[22px] ">Dark Mode</p>
                 </div>
             </div>
         </div>
@@ -57,22 +57,25 @@
 
                             <div class="input flex gap-[24px] items-center py-[19px] pl-[32px] rounded-[5px]">
                                 <button><i class="bi bi-search"></i></button>
-                                <input type="search" placeholder="Search for a country…" class="outline-none w-[400px]">
+                                <input id="search" type="search" placeholder="Search for a country…" class="outline-none w-[400px]">
                             </div>
 
-                            <select id="select" class="py-[18px] pl-[24px] pr-[48px] rounded-[5px] text-[#111517]">
-                                <option value="region" selected>Filter by Region</option>
-                                <option value="region">Africa</option>
-                                <option value="region">America</option>
-                                <option value="region">Asia</option>
-                                <option value="region">Europe</option>
-                                <option value="region">Oceania</option>
+                            <select id="region" class="py-[18px] pl-[24px] pr-[48px] rounded-[5px] text-[#111517]">
+                                <option value="" selected>Filter by Region</option>
+                                <option value="africa">Africa</option>
+                                <option value="americas">America</option>
+                                <option value="asia">Asia</option>
+                                <option value="europe">Europe</option>
+                                <option value="oceania">Oceania</option>
+                                <option value="Antarctic Ocean">Antartic Ocean</option>
+                                <option value="Antarctic">Antartic</option>
+                                <option value="polar">Polar</option>
                             </select>
                         </form>
 
                     </div>
 
-                    <div class="flags__wrapper flex justify-between flex-wrap gap-y-[72px] mb-24">
+                    <div class="flags__wrapper flex gap-[68px] flex-wrap gap-y-[72px] mb-24">
 
                         <!-- <div>
                                 <img src="./assets/images/flag-germany.jpeg" alt="flag-germany">
