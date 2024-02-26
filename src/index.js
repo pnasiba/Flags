@@ -9,6 +9,8 @@ const header2 = $("header");
 const tagh1 = $(".title");
 const darkModeBtn = $(".dark-btn");
 
+let cards = $$('.card')
+
 let flagsDataUrl = "https://restcountries.com/v2";
 
 // ------------------------ GetFlags Function and Normalize ---------------------------
@@ -56,6 +58,7 @@ function renderData(data) {
              </div>
         `
       );
+      card.dataset.country = el.name
       flagsWrapper.appendChild(card);
     });
   } else {
@@ -136,3 +139,19 @@ async function filterRegions(filterEl) {
 regionsFilter.addEventListener("change", (e) => {
   filterRegions(e.target.value.trim());
 });
+
+
+flagsWrapper.addEventListener('click', (e)=>{
+  if (
+    e.target.parentNode.classList.contains("card") ||
+    e.target.parentNode.classList.contains("flags-title")
+  ) {
+    console.log(e.target);
+    let data = e.target.parentNode.getAttribute("data-country");
+    localStorage.setItem("data-country", data);
+
+    if(localStorage.getItem('data-country')){
+      window.location.href = './country.html'
+    }
+  }
+})
